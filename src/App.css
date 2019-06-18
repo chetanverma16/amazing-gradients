@@ -1,33 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:900|Noto+Sans+HK&display=swap');
+body,html{
+  font-size: 16px;
+  overflow-x: hidden;
+    background-color: black;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  margin-top:2em;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header h1{
+font-size: 1em;
+font-weight: 400;  
+padding: 2em;
+margin-right: 25em;
+}
+li{
+  display: inline-block;
+}
+li a {
+  text-decoration: none;
+  color: white;
+  padding:1em;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+li a:hover{
+  opacity: 0.5;
+}
+li a button{
+  background: #2c59fb;
+  color: white;
+  border: 0px;
+  padding: 1em 2em;
+}
+.header-title{
+  font-family: 'Muli', sans-serif;
+  font-size: 3em;
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.gradient-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 0.8em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.gradient-card button{
+  background: transparent;
+  border:0px;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+
+.gradient-card button:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.gradient-card button h1{
+  color: white;
+  position:absolute;
+  text-align: center;
+  font-size: 0.8em;
+  top:40%;
+  left:38%;
+
+}
+.gradient{
+  margin: 2em;
+  padding: 2em;
+  height: 22em;
+  width: 22em;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.gradient span{
+  position:relative;
+  color: white;
+  top:50%;
+  font-size: 1.2em;
+}
+.footer{padding: 5em;}
+.footer a{
+  text-decoration: none;
+  color:#2c59fb;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body{
+    font-size: 6px;
   }
-  to {
-    transform: rotate(360deg);
+  .App-header{
+    margin-top: 1em;
+
   }
+  header{
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+  header h1{
+    position: relative;
+    font-size: 3em;
+    justify-self: center;
+    margin-right: 0em;
+  }
+  header li a{
+    font-size:2em; 
+  }
+  header li a{
+    padding: 0.4em;
+
+  }
+  li a button{
+  padding: 0.5em 1em;
+}
+.gradient{
+  height: 12em;
+  width: 12em;
+}
+
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    body{
+    font-size: 10px;
+  }
+
+  header{
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+  header h1{
+    position: relative;
+    font-size: 3em;
+    justify-self: center;
+    margin-right: 0em;
+  }
+  header li a{
+    font-size:2em; 
+  }
+  header li a{
+    padding: 0.4em;
+
+  }
+  li a button{
+  padding: 0.5em 1em;
+}
+.gradient-grid{
+  grid-template-columns: repeat(2,1fr)
+}
+.gradient{
+  height: 15em;
+  width: 15em;
+}
+.footer{
+  padding: 1em;
+}
+
+}
+
+@media only screen and (min-device-width : 2560px){
+
+   body{
+    font-size: 30px;
+  }
+.gradient-grid{
+  grid-template-columns: repeat(3,1fr)
+}
+.gradient{
+  height: 35em;
+  width: 35em;
+}
+.footer{
+  padding: 5em;
+}
+
+
 }
